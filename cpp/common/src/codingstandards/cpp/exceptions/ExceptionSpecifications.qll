@@ -58,3 +58,12 @@ predicate isNoExceptTrue(Function f) {
       isNoExceptTrue(calledCopyConstructor)
     )
   )
+  or
+  f.isDeleted()
+}
+
+predicate isNoExceptExplicitlyFalse(Function f) {
+  exists(FunctionDeclarationEntry fde | fde = f.getADeclarationEntry() |
+    not fde.getNoExceptExpr().isCompilerGenerated() and isFDENoExceptFalse(fde)
+  )
+}
