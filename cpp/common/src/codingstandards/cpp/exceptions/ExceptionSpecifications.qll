@@ -21,3 +21,7 @@ string getDynamicExceptionSpecification(Function f) {
   result =
     "throw(" + concat(HandlerType type | type = f.getAThrownType() | type.getHandledTypeName(), ",")
       + ")"
+}
+
+predicate isFDENoExceptTrue(FunctionDeclarationEntry fde) {
+  fde.isNoExcept()
