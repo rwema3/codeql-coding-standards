@@ -1,0 +1,2 @@
+| test.cpp:25:5:25:7 | __x | Name $@ uses the reserved prefix '__'. | test.cpp:25:5:25:7 | __x | __x |
+| test.cpp:30:5:30:7 | __x | Name $@ uses the reserved prefix '__'. | test.cpp:30:5:30:7 | __x | __x |

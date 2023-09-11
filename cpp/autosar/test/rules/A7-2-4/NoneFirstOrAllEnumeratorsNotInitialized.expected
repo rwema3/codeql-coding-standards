@@ -1,0 +1,4 @@
+| test.cpp:13:12:13:13 | A2 | Neither none, the first, or all enumerated constants are initialized in this enumeration. |
+| test.cpp:47:14:47:15 | B3 | Neither none, the first, or all enumerated constants are initialized in this enumeration. |
+| test.cpp:63:6:63:6 | D | Neither none, the first, or all enumerated constants are initialized in this enumeration. |
+| test.cpp:75:6:75:7 | E1 | Neither none, the first, or all enumerated constants are initialized in this enumeration. |

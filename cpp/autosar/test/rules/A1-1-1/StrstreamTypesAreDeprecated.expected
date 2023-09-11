@@ -1,0 +1,11 @@
+| StrstreamTypesAreDeprecated.cpp:4:8:4:19 | type mention | Use of <strstream> class 'strstreambuf' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:7:6:7:17 | type mention | Use of <strstream> class 'strstreambuf' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:8:19:8:30 | type mention | Use of <strstream> class 'strstreambuf' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:12:8:12:17 | type mention | Use of <strstream> class 'istrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:14:8:14:17 | type mention | Use of <strstream> class 'istrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:16:8:16:17 | type mention | Use of <strstream> class 'istrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:19:6:19:15 | type mention | Use of <strstream> class 'istrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:20:19:20:28 | type mention | Use of <strstream> class 'istrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:24:8:24:17 | type mention | Use of <strstream> class 'ostrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:27:6:27:15 | type mention | Use of <strstream> class 'ostrstream' is deprecated. |
+| StrstreamTypesAreDeprecated.cpp:28:19:28:28 | type mention | Use of <strstream> class 'ostrstream' is deprecated. |
