@@ -25,3 +25,15 @@ string getDynamicExceptionSpecification(Function f) {
 
 predicate isFDENoExceptTrue(FunctionDeclarationEntry fde) {
   fde.isNoExcept()
+  or
+  // Destructors should be noexcept(true) unless explicitly noexcept(false)
+  fde.getFunction() instanceof Destructor and
+  not exists(string value | value = fde.getNoExceptExpr().getValue())
+  or
+  exists(string value | value = fde.getNoExceptExpr().getValue() |
+    // Anything other than "false" (boolean literal) or "0" (integral/pointer literal) will be converted to true
+    not value = "false" and
+    not value = "0"
+  )
+}
+
