@@ -5,3 +5,4 @@
  */
 
 import cpp
+import codingstandards.cpp.Class
