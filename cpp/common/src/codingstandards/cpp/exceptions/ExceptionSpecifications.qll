@@ -37,3 +37,11 @@ predicate isFDENoExceptTrue(FunctionDeclarationEntry fde) {
   )
 }
 
+predicate isFDENoExceptFalse(FunctionDeclarationEntry fde) {
+  fde.getNoExceptExpr().getValue() = "false" or
+  fde.getNoExceptExpr().getValue() = "0"
+}
+
+/**
+ * Holds if the function `f` is declared in at least one location to be `noexcept(true)` or equivalent, or is
+ * implied to have a `noexcept(true)` specification, being compiler-generated or deleted.
