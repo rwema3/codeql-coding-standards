@@ -45,3 +45,16 @@ predicate isFDENoExceptFalse(FunctionDeclarationEntry fde) {
 /**
  * Holds if the function `f` is declared in at least one location to be `noexcept(true)` or equivalent, or is
  * implied to have a `noexcept(true)` specification, being compiler-generated or deleted.
+ */
+predicate isNoExceptTrue(Function f) {
+  exists(FunctionDeclarationEntry fde | fde = f.getADeclarationEntry() | isFDENoExceptTrue(fde))
+  or
+  // Compiler generated implicit copy constructors are implied noexcept(true) if they only call noexcept functions
+  exists(ImplicitCopyConstructor cc | f = cc |
+    forall(Function calledFunction | cc.calls(f) | isNoExceptTrue(calledFunction)) and
+    forall(CopyConstructor calledCopyConstructor |
+      calledCopyConstructor = cc.getAnInferredCalledCopyConstructor()
+    |
+      isNoExceptTrue(calledCopyConstructor)
+    )
+  )
