@@ -1,0 +1,2 @@
+| test.c:22:3:22:7 | call to qsort | Call to banned function qsort. |
+| test.c:26:9:26:15 | call to bsearch | Call to banned function bsearch. |
