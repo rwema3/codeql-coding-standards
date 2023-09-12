@@ -6,4 +6,5 @@ int getX() { return 5; }
 int main(int argc, char **argv) {
   int x = 0;      // COMPLIANT[DEVIATED]
   getX();         // NON_COMPLIANT
+  long double d1; // NON_COMPLIANT (for A0-4-2)
  
