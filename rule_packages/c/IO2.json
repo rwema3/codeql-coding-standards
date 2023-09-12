@@ -1,0 +1,82 @@
+{
+  "CERT-C": {
+    "FIO38-C": {
+      "properties": {
+        "obligation": "rule"
+      },
+      "queries": [
+        {
+          "description": "Using a copy of a FILE object may result in program failure.",
+          "kind": "problem",
+          "name": "Do not copy a FILE object",
+          "precision": "very-high",
+          "severity": "error",
+          "short_name": "DoNotCopyAFileObject",
+          "tags": [
+            "correctness",
+            "security"
+          ]
+        }
+      ],
+      "title": "Do not copy a FILE object"
+    },
+    "FIO40-C": {
+      "properties": {
+        "obligation": "rule"
+      },
+      "queries": [
+        {
+          "description": "A string that used in a failing call to fgets() or fgetws() requires a reset before being referenced.",
+          "kind": "problem",
+          "name": "Reset strings on fgets() or fgetws() failure",
+          "precision": "very-high",
+          "severity": "error",
+          "short_name": "ResetStringsOnFgetsOrFgetwsFailure",
+          "tags": [
+            "correctness",
+            "security"
+          ]
+        }
+      ],
+      "title": "Reset strings on fgets() or fgetws() failure"
+    },
+    "FIO41-C": {
+      "properties": {
+        "obligation": "rule"
+      },
+      "queries": [
+        {
+          "description": "Using an expression that has side effects as the stream argument to `getc()` or `putc()` can result in unexpected behavior.",
+          "kind": "problem",
+          "name": "Do not call getc(), putc(), getwc(), or putwc() with a stream argument that has side effects",
+          "precision": "very-high",
+          "severity": "error",
+          "short_name": "DoNotCallGetcAndPutcWithSideEffects",
+          "tags": [
+            "correctness"
+          ]
+        }
+      ],
+      "title": "Do not call getc(), putc(), getwc(), or putwc() with a stream argument that has side effects"
+    },
+    "FIO44-C": {
+      "properties": {
+        "obligation": "rule"
+      },
+      "queries": [
+        {
+          "description": "Arguments for `fsetpos()` can only be obtained from calls to `fgetpos()`.",
+          "kind": "problem",
+          "name": "Only use values for fsetpos() that are returned from fgetpos()",
+          "precision": "very-high",
+          "severity": "error",
+          "short_name": "OnlyUseValuesForFsetposThatAreReturnedFromFgetpos",
+          "tags": [
+            "correctness"
+          ]
+        }
+      ],
+      "title": "Only use values for fsetpos() that are returned from fgetpos()"
+    }
+  }
+}
