@@ -8,4 +8,5 @@ int main(int argc, char **argv) {
   getX();         // NON_COMPLIANT
   long double d1; // NON_COMPLIANT (for A0-4-2)
   long double d2; // a0-4-2-deviation COMPLIANT[DEVIATED]
- 
+  return 0;
+}
