@@ -8,3 +8,5 @@ then
 fi
 
 echo "Setting Local Branch Version to $1."
+
+# update the qlpacks 
