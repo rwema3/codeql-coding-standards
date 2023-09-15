@@ -14,3 +14,4 @@ find . -name 'qlpack.yml' | grep -v './codeql_modules' | grep -v './scripts' | x
 
 # update the documentation. 
 
+find docs -name 'user_manual.md' | xargs sed -i "s/code-scanning-cpp-query-pack-.*\.zip\`/code-scanning-cpp-query-pack-${1}.zip\`/"
